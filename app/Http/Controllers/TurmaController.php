@@ -23,15 +23,10 @@ class TurmaController extends Controller
         return response('Turma '. $request['nome'] . ' criada com sucesso');
     }
 
-    public function show($id)
-    {
-        return Turma::findOrFail($id);
-    }
-
     public function destroy($id)
     {
         $turma = Turma::findOrFail($id);
         $turma->delete();
-        return response('Turma deletada: '. $turma['nome']);
+        return response('Turma deletada: '. $turma['nome']);    
     }
 }

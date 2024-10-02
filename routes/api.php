@@ -7,9 +7,6 @@ Route::prefix('turmas')->group(function () {
     Route::get('/', [TurmaController::class, 'index'])
         ->name('classroom.turmas');
 
-    Route::get('/{id}', [TurmaController::class, 'show'])
-        ->name('classroom.turmas.turma');
-
     Route::post('/criar', [TurmaController::class, 'store'])
         ->name('classroom.turmas.criar');
 
